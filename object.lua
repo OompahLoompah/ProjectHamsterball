@@ -59,21 +59,7 @@ function object:getImage()
 end
 
 function object:update(dt)
-
-	if self.xSpeed > 0 or self.xSpeed < 0 then
-		self.x = self.x+(self.xSpeed*dt)
-	end
-
-	if self.ySpeed > 0 or self.ySpeed < 0 then
-		self.y = self.y+(self.ySpeed*dt)
-	end
-
-	if self.y < 0 or self.y > 1080 then
-		self.ySpeed = -self.ySpeed
-	end
-
-	if self.x < 0 or self.x > 1920 then
-		self.xSpeed = -self.xSpeed
-	end
+	
+	
 
 end

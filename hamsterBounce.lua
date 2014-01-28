@@ -42,6 +42,29 @@ function state.update(dt)
 	cam:update(dt)
 
 	for i = 1, #objects do
+	if objects[i].xSpeed > 0 or objects[i].xSpeed < 0 then
+		objects[i].x = objects[i].x+(objects[i].xSpeed*dt)
+	end
+
+	if objects[i].ySpeed > 0 or objects[i].ySpeed < 0 then
+		objects[i].y = objects[i].y+(objects[i].ySpeed*dt)
+	end
+
+	if objects[i].y > 1080 and objects[i].ySpeed > 0 then
+		objects[i].ySpeed = -objects[i].ySpeed
+	end
+
+	if objects[i].y < 0 and objects[i].ySpeed < 0 then
+		objects[i].ySpeed = -objects[i].ySpeed
+	end
+
+	if objects[i].x > 1920 and objects[i].xSpeed > 0 then
+		objects[i].xSpeed = -objects[i].xSpeed
+	end
+
+	if objects[i].x < 0 and objects[i].xSpeed < 0 then
+		objects[i].xSpeed = -objects[i].xSpeed
+	end
 		objects[i]:update(dt)
 	end
 
