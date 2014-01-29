@@ -46,19 +46,19 @@ function player.update(dt)
 
 	--Change Player Speed
 	if love.keyboard.isDown("right") then
-		xSpeed = xSpeed + 1
+		xSpeed = xSpeed + (1*dt)
 	end
 	
 	if love.keyboard.isDown("left") then
-		xSpeed = xSpeed - 1
+		xSpeed = xSpeed - (1*dt)
 	end
 
 	if love.keyboard.isDown("down") then	
-		ySpeed = ySpeed + 1
+		ySpeed = ySpeed + (1*dt)
 	end
 
 	if love.keyboard.isDown("up") then	
-		ySpeed = ySpeed - 1
+		ySpeed = ySpeed - (1*dt)
 	end
 
 

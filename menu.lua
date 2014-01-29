@@ -4,8 +4,6 @@ function state.init()
 	local menuCanvaser = canvaser
 	local transparency = canvaser
 	local transparent = love.graphics.newCanvas()
-	menu1 = love.graphics.newImage('resources/imgs/plant repack_2.png')
-
 
 end
 
